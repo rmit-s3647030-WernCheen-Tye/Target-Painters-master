@@ -76,10 +76,14 @@ public class MainFrame {
 				System.out.print("Select a product by keying the productID:");
 				Scanner sc = new Scanner(System.in);
 				String userInput = sc.nextLine();
+				//not sure how do I link to customerSelections Class and Database here
 				userInput = customerSelections;
 				while (userInput == CustomerSelection.getProductID()){
 					
 				}
+				customerSelections = DatabaseOperations.customerSelections();
+				for (Product customerselection : customerSelections) {
+	        		System.out.println(CustomerSelection.getDefaultGson().toJson(customerSelection));
 				
 				
 				
